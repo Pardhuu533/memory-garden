@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --washi-base: #faf6ee;
+    --washi-card: #fdfbf7;
+    --sumi-ink: #2c2825;
+    --sumi-soft: #585149;
+    --sumi-faint: #857c72;
+    --vermilion: #b94f38;
+    --moss: #4d5945;
+    --ochre: #b58448;
+    --indigo: #495d73;
+    --plum: #9a6575;
+  }
+
+  html,
+  body {
+    background-color: var(--washi-base);
+    color: var(--sumi-ink);
+    font-family: var(--font-serif), Georgia, Cambria, "Times New Roman", Times, serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    overscroll-behavior: none;
+  }
+}
+
+/* Hide scrollbar across browsers while maintaining accessibility and scrollability */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Subtle hand-drawn and paper utility styling */
+.washi-edge {
+  border-image: linear-gradient(to bottom, #ded5c5, #cbbfab) 1;
+}
+
+.ink-stroke {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
